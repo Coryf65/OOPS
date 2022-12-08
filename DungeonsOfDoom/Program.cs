@@ -1,2 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using DungeonsOfDoom;
+
+ConsoleGame game = new ConsoleGame();
+game.Play();

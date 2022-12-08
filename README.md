@@ -37,23 +37,73 @@
 
 ## Classes vs Object
 
-| Class  | Object |
-| ------------- | ------------- |
-| "Blueprint for a building"  | "Actual building" |
-| Resides in disk as a .cs file  | Created by calling a construtor |
-| Always one per type | As many as your program neeeds |
+	| Class  | Object |
+	| ------------- | ------------- |
+	| "Blueprint for a building"  | "Actual building" |
+	| Resides in disk as a .cs file  | Created by calling a construtor |
+	| Always one per type | As many as your program neeeds |
 
 ## Class Members
 
-- Constructors
-	Sets the *state* of the object (usually assigning values to props)
+	- Constructors
+		Sets the *state* of the object (usually assigning values to props)
 
-- Fields
-	Contains the *data* of the object
+	- Fields
+		Contains the *data* of the object
 
-- Properties
-	Exposes the data of the object
+	- Properties
+		Exposes the data of the object
 
-- Methods
-	Does something to the object
-	The only place to do time-consuming operations
+	- Methods
+		Does something to the object
+		The only place to do time-consuming operations
+
+### Inheritance
+
+	- Concept
+		
+		Used primarily for code re-use (the derived classes inherits the members of the base class)
+
+	- The Is-a Rule
+
+		A [Sub class / Derived] *is a* [Base class / Super class]
+		Example: A Cat is an Animal
+
+		```C#
+		class Cat : Animal { }
+		```
+
+	- The Object class
+
+		At the "top" of the inheritance chain is a class called object.
+
+		Example: We have many methods without creating them. like *.ToString() .GetType()*
+
+	- Single vs. Mulitple Inheritance
+
+		- Languages such as C# and Java support single inheritance
+
+			A class can have *only one* direct base class
+
+		- Languages such as C++ allows for multiple inheritance
+
+			A class can have *multiple* direct base classes
+
+	- Inheritance and Constructors
+
+	- Abstract Classes
+
+		- Used only to provide code reuse to derived classes. Has code that is useful to the sub classes.
+			Like a note to other devs saying please do not instaniate this class but use it to inherit from only.
+
+		- Can *not* be instantiated
+
+		- By specifying a class as abstract you say
+			
+		"This class exists only to be inherited from"
+
+		we do not need instances of **Animal** but the **Cat** which inherits from **Animal**
+
+		```C#
+		abstract class Animal {}
+		```
