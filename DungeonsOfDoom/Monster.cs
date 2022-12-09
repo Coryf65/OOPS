@@ -1,12 +1,10 @@
 ﻿namespace DungeonsOfDoom
 {
-    internal class Monster
-    {
-        public int Health { get; set; }
-        
-        public Monster(int health)
+    abstract class Monster : Character
+    {            
+        public Monster(int health) : base(health)
         {
-            Health = health;
+
         }
     }
 }

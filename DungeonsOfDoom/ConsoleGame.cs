@@ -20,7 +20,7 @@
                 DisplayWorld();
                 DisplayStats();
                 AskForMovement();
-            } while (player.Health > 0);
+            } while (player.IsAlive);
 
             GameOver();
         }
@@ -34,7 +34,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Generates the game room
         /// </summary>
         private void CreateWorld()
         {
@@ -46,8 +46,10 @@
                     world[x, y] = new Room();
 
                     int percentage = random.Next(0, 100);
-                    if (percentage < 10)
-                        world[x, y].Monster = new Monster(30);
+                    if (percentage < 5) // 50% it's an ogre
+                        world[x, y].Monster = new Ogre();
+                    else if (percentage < 10) // 10% it's a skeleton
+                        world[x, y].Monster = new Skeleton();                            
                     else if (percentage < 20)
                         world[x, y].Item = new Item("Sword");
                 }
@@ -55,7 +57,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Renders the game room to the console window
         /// </summary>
         private void DisplayWorld()
         {

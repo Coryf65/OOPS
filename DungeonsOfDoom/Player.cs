@@ -1,14 +1,12 @@
 ﻿namespace DungeonsOfDoom
 {
-    internal class Player
+    internal class Player : Character
     {
-        public int Health { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
 
-        public Player(int health, int x, int y)
+        public Player(int health, int x, int y) : base(health)
         {
-            Health = health;
             X = x;
             Y = y;
         }
