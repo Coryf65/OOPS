@@ -1,6 +1,6 @@
 ﻿namespace DungeonsOfDoom
 {
-    internal class Item
+    abstract class Item
     {
         public string Name { get; set; }
         

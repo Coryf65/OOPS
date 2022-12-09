@@ -50,8 +50,10 @@
                         world[x, y].Monster = new Ogre();
                     else if (percentage < 10) // 10% it's a skeleton
                         world[x, y].Monster = new Skeleton();                            
+                    else if (percentage < 15)
+                        world[x, y].Item = new Potion();
                     else if (percentage < 20)
-                        world[x, y].Item = new Item("Sword");
+                        world[x, y].Item = new Sword();
                 }
             }
         }
