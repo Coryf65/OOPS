@@ -4,7 +4,7 @@
     {
         Player player;
         Room[,] world;
-        Random random = new Random();
+        Random random = new();
 
         /// <summary>
         /// Main Game loop
@@ -81,11 +81,22 @@
             }
         }
 
+        /// <summary>
+        /// Displays players stats
+        /// </summary>
         private void DisplayStats()
         {
             Console.WriteLine($"Health: {player.Health}");
+
+            foreach (Item item in player.Backpack)
+            {
+                Console.WriteLine(item.Name);
+            }
         }
 
+        /// <summary>
+        /// Handles player movements
+        /// </summary>
         private void AskForMovement()
         {
             int newX = player.X;
@@ -108,9 +119,29 @@
             {
                 player.X = newX;
                 player.Y = newY;
+
+                EnterRoom();
             }
         }
 
+        /// <summary>
+        /// Player has entered the room
+        /// </summary>
+        private void EnterRoom()
+        {
+            Room currentRoom = world[player.X, player.Y];
+
+            if (currentRoom.Item is not null)
+            {
+                // player wants to pick up this item
+                player.Backpack.Add(currentRoom.Item);
+                currentRoom.Item = null; // removes item from the world
+            }
+        }
+
+        /// <summary>
+        /// Game ends handle all logic here
+        /// </summary>
         private void GameOver()
         {
             Console.Clear();
