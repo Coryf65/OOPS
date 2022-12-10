@@ -435,6 +435,7 @@ We don't call main the runtime calls this. It sets up an entry point for us. No 
 </details>
 
 ### Class Libraries
+---
 
 - Your project must add a reference to the Class Library. Just because they are in the same solution does not allow them to talk with one another.
 
@@ -476,18 +477,74 @@ Person p = new();
 - Public types and members - Can also be reached from any project that references the project
 
 ### Reference and Value Types
+---
 
 - differences
 
+| Referece Types  | Value Types |
+| --------------  | ----------- |
+| Type created using the *class* keyword  | Type created using the *struct* keyword (i.e: int, double, DateTime) |
+| *Points* to a value | **Contains** a value |
+| Default value: null | "Actual" default values (int = 0, bool = false) |
+
 - Structs and Inheritance
 
-- When to use which ?
+	- **Structs** implicitly inherit System.ValueType
+	- **Structs** can implement interfaces
+	- **Structs** cannot be made abstract
+	- **Structs** are implicitly sealed
 
-- Boxing and UnBoxing
+- When to use which? (classes vs structs)
+
+	- "Since pretty much all simple types have a;ready been defined in the base class library, we can create a class"
+
+- Boxing
+
+	- Done (implicitly) when a value type is treated as a reference type:
+
+```C#
+static void Main(string[] args)
+{
+  Foo(10); // Boxing the int as an object
+}
+
+static void Foo(object value)
+{
+	// some code here
+}
+```
+
+- UnBoxing
+
+	- Done (explicitly) when a reference type is cast into a value type:
+
+```C#
+static void Main(string[] args)
+{
+  Foo(10); // Boxing the int as an object
+}
+
+static void Foo(object value)
+{
+	// UnBoxing the object (by casting it back into it's original type)
+	int myInt = (int)value;
+}
+```
+
+> Ususally useful if we are using some code out of our control where we can work around the limitations
 
 - Nullable Value Types
 
+	- A generic type that allows for nullable value types.. 
+	( Nullable<int>, int?)
+
 - Nullable Reference Types
+
+	- an opt-in feature starting in *C# 8*
+
+	- Per file using **#nullable enable**
+
+	- Per project using **<Nullable>enable</Nullable>**
 
 
 ---
