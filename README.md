@@ -65,6 +65,7 @@
 - [Abstraction](#abstraction)
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
+- [Static Classes](#staticclasses)
 
 
 ### Inheritance
@@ -323,6 +324,46 @@ some examples in the Zoo project
 	- Not to break current implementations
 
 	- Have a method in the interface have a default implementation
+
+### Static Classes
+___
+
+- The effects of making a **class** static
+
+	[x] The class may *only* contain static members
+	[x] The class **cannot** be instantiated
+	[x] The class **cannot** be derived from
+
+- Static Members
+
+	- static members are class members rather than object members.
+
+- Calling Static Members
+
+```C#
+class Person
+{
+  public string Name { get; set; }
+  public static int InstanceCount { get; set; }
+
+  public Person()
+  {
+    InstanceCount++;
+  }
+}
+
+// Non static members are called on objects, **Console** class
+Person person = new();
+Console.WriteLine(person.Name);
+
+// static members are called on the class
+Console.WriteLine(Person.InstanceCount);
+
+```
+
+- Writing Utility Classes
+
+- Static Constructors
 
 ---
 - [back to top](#oops)
