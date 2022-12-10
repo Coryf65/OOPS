@@ -140,8 +140,8 @@ abstract class Animal {}
 ```C#
 abstract class Car
 {
-public int Speed { get; set; }
-public abstract void Start(); // don't implement'
+  public int Speed { get; set; }
+  public abstract void Start(); // don't implement'
 }
 ```
 
@@ -160,7 +160,7 @@ A means of executing type specific code (without type checking)
 ```C#
 class Car
 {
-public int Speed { get; set; }
+  public int Speed { get; set; }
 }
 
 class SportsCar : Car
@@ -170,7 +170,7 @@ class SportsCar : Car
 
 static void StopCar(Car car)
 {
-car.Speed = 0;
+  car.Speed = 0;
 }
 
 StopCar(new Car());
@@ -192,21 +192,21 @@ StopCar(new SportsCar());
 ```C#
 class Car
 {
-public int Speed { get; set; }
+  public int Speed { get; set; }
 
-public virtual void Start()
-{
-Speed = 50;
-}
+  public virtual void Start()
+  {
+    Speed = 50;
+  }
 }
 
 class SportsCar : Car
 {
-// Overriding the method
-public override void Start()
-{
-Speed = 100;
-}
+  // Overriding the method
+  public override void Start()
+  {
+    Speed = 100;
+  }
 }
 ```
 
@@ -221,9 +221,9 @@ cars[1] = new SportsCar();
 
 foreach (Car car in cars)
 {
-// Dynamic Binding
-// so now the car's speed will be 100 if it's a sports car
-car.Start();
+  // Dynamic Binding
+  // so now the car's speed will be 100 if it's a sports car
+  car.Start();
 }
 ```
 
@@ -244,7 +244,7 @@ car.Start();
 ```C#
 interface IStartable
 {
-void Start();
+   void Start();
 }
 ```
 
@@ -259,17 +259,17 @@ void Start();
 ```C#
 class Car : Vehicle, IStartable
 {
-public int Speed { get; set; }
+  public int Speed { get; set; }
 
-public void Start()
-{
-Speed = 50;
-}
+  public void Start()
+  {
+    Speed = 50;
+  }
 }
 
 interface IStartable
 {
-void Start();
+  void Start();
 }
 ```
 
