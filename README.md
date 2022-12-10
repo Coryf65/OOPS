@@ -107,3 +107,41 @@
 		```C#
 		abstract class Animal {}
 		```
+
+### Polymorphism
+
+	A means of executing type specific code (without type checking)
+
+	- Type substitution
+		
+		Base classes can be substituted by more derived classes
+
+		*example*
+		```C#
+		class Car
+		{
+			public int Speed { get; set; }
+		}
+
+		class SportsCar : Car
+		{
+
+		}
+
+		static void StopCar(Car car)
+		{
+			car.Speed = 0;
+		}
+
+		StopCar(new Car());
+
+		// Type Substitution, pass any class that inherits 'Car'
+		// The sports car is a car
+		StopCar(new SportsCar());
+		```
+
+	- Virtual Members
+
+	- Dynamic Bindings
+
+	- Abstract Members
