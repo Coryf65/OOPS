@@ -185,6 +185,7 @@ A means of executing type specific code (without type checking)
 	foreach (Car car in cars)
 	{
 		// Dynamic Binding
+		// so now the car's speed will be 100 if it's a sports car
 		car.Start();
 	}
 	```
