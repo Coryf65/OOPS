@@ -2,10 +2,10 @@
 
 > C# is an object-oriented programming language. The four basic principles of object-oriented programming are:
 
-    Abstraction Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
-    Encapsulation Hiding the internal state and functionality of an object and only allowing access through a public set of functions.
-    Inheritance Ability to create new abstractions based on existing abstractions.
-    Polymorphism Ability to implement inherited properties or methods in different ways across multiple abstractions.
+    **Abstraction** Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
+    **Encapsulation** Hiding the internal state and functionality of an object and only allowing access through a public set of functions.
+    **Inheritance** Ability to create new abstractions based on existing abstractions.
+    **Polymorphism** Ability to implement inherited properties or methods in different ways across multiple abstractions.
 
 - Microsoft [link to docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
 
@@ -62,6 +62,7 @@
 ## Concept quick links
 
 - [Inheritance](#inheritance)
+- [Abstraction](#abstraction)
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
 
@@ -116,6 +117,16 @@
 	```C#
 	abstract class Animal {}
 	```
+
+### Abstraction
+---
+
+	The meaning of abstraction is, you don't need to explain everything. In our real life, we have vehicles such as cars, motorcycles and scooters. People only know how to drive these vehicles. It's not necessary to know how the vehicle runs or how petrol or diesel works in that vehicle.
+ 
+	So when we define an abstract we don't need to explain everything. It's a type of class, but you cannot create an instance (object) of it. In other words you cannot create an instance of the class. Now you might ask why do we not create an instance of an abstract class? The answer is that when we create or define an abstract class, it's not complete.
+ 
+	You must inherit this class and define its methods and properties on this new derived class. 
+
 
 ### Polymorphism
 ---
