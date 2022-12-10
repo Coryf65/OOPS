@@ -360,10 +360,9 @@ Console.WriteLine(person.Name);
 Console.WriteLine(Person.InstanceCount);
 ```
 
-- Writing Utility Classes
+- The main purpose for static classes
 
-The main usuage for static classes
-	- like 'Console', 'File', 'String'
+	- writing utility / helper classes (like the 'Console', 'File', 'String' classes)
 
 *example*
 ```C#
@@ -380,6 +379,54 @@ bool b1 StringUtils.IsNumeric("10"); // true
 ```
 
 - Static Constructors
+
+	- called automatically before the class is "touched", no access modifiers and no parameters
+
+```C#
+class Person
+{
+  static Person()
+  {
+    // Run any code in here to initialize static members
+  }
+}
+```
+
+- Why are these Static ?
+
+1. Console.WriteLine()
+
+<details><summary>Answer for #1</summary>
+<p>
+We only use the Console in a Console App. We only have One Console so there is no confusion as to which one we are reffering to.
+</p>
+</details>
+
+2. Math.Abs(int value)
+
+<details><summary>Answer for #2</summary>
+<p>
+If we had 2 instances of this class and pass in the same value. We would expect the same output. All Math operations are shared and work in one way.
+</p>
+</details>
+
+3. string.IsNullOrEmpty(string value)
+
+<details><summary>Answer for #3</summary>
+<p>
+If the string was null we wanted to check we would get a runtime error, a Null reference Exception
+</p>
+</details>
+
+4. Program.Main(string[] args) // the main method
+
+<details><summary>Answer for #4</summary>
+<p>
+We don't call main the runtime calls this. It sets up an entry point for us. No point to have multiple entry points would be confusing.
+</p>
+</details>
+
+
 
 ---
 - [back to top](#oops)
