@@ -20,5 +20,10 @@
             Console.WriteLine($"*CHEW* ... {this.Name} ate most of the {animalToEat.Name} and buried the bones...");
             this.Weight += animalToEat.Weight * 0.8;
         }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine("BORK!");
+        }
     }
 }

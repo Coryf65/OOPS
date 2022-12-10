@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    internal class Animal
+    public abstract class Animal
     {
         public string Name { get; set; }
         public double Weight { get; set; }
@@ -17,16 +17,16 @@ namespace Zoo
             Name = name;
             Weight = weight;
             Age = age;
-        }
 
-        /// <summary>
-        /// Eats an animal and gains it's weight
-        /// </summary>
-        /// <param name="animalToEat">The animal you are eating</param>
+            MakeSound();
+        }
+        
         public virtual void Eat(Animal animalToEat)
         {
             Console.WriteLine($"*CHOMP* ... {this.Name} just ate the {animalToEat.Name}.");
             this.Weight += animalToEat.Weight;
         }
+
+        public abstract void MakeSound(); // Abstract Member
     }
 }

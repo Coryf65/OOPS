@@ -191,3 +191,20 @@ A means of executing type specific code (without type checking)
 	```
 
 4. Abstract Members
+
+	- Only *abstract classes* may contain abstract members
+
+	- Abstract members *are not* implemented
+
+	- Overriding an abstract *member* **is Mandatory**
+
+		for example if we created a sub class of *SportsCar* we would need to implement the Start method
+
+	```C#
+	abstract class Car
+	{
+		public int Speed { get; set; }
+		public abstract void Start(); // don't implement'
+	}
+	```
+

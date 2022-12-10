@@ -12,5 +12,10 @@ namespace Zoo
         {
 
         }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine("squeak...");
+        }
     }
 }
