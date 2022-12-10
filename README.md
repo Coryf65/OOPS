@@ -6,7 +6,8 @@
     Encapsulation Hiding the internal state and functionality of an object and only allowing access through a public set of functions.
     Inheritance Ability to create new abstractions based on existing abstractions.
     Polymorphism Ability to implement inherited properties or methods in different ways across multiple abstractions.
-    - Microsoft [link](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
+
+- Microsoft [link](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
 
 ## What is Object Orientation ?
 
@@ -112,7 +113,7 @@
 
 	A means of executing type specific code (without type checking)
 
-	- Type substitution
+	1. Type substitution
 		
 		Base classes can be substituted by more derived classes
 
@@ -142,8 +143,16 @@
 		StopCar(new SportsCar());
 		```
 
-	- Virtual Members
+	2. Virtual Members
 
-	- Dynamic Bindings
+		allows derived classes to override / specialize functionality
 
-	- Abstract Members
+		overriding a virtual member is optional
+
+		*example:*
+		```C#
+		```
+
+	3. Dynamic Bindings
+
+	4. Abstract Members
