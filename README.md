@@ -72,6 +72,7 @@
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
 - [Static Classes](#staticclasses)
+- [Class Libraries](#classlibraries)
 
 
 ### Inheritance
@@ -431,6 +432,47 @@ If the string was null we wanted to check we would get a runtime error, a Null r
 We don't call main the runtime calls this. It sets up an entry point for us. No point to have multiple entry points would be confusing.
 </p>
 </details>
+
+### Class Libraries
+
+- Your project must add a reference to the Class Library. Just because they are in the same solution does not allow them to talk with one another.
+
+1. Namespaces
+	
+	- Used to group related classes together (system.io, for reading and writing files)
+	- Minimizes the risk of name collisions
+	- Typically matches the physical folder structure on disk (kinda of like directories for files, used to organize!)
+
+2. Referencing Types in Namespaces
+
+	- Qualify the full path or use a *using* statement
+
+```C#
+// Option 1: Fully qualified path
+People.Person p = new();
+
+// Option 2: a Using Statement
+using People
+
+Person p = new();
+```
+
+3. When to Create Class Libraries
+
+	- Whenever you need to use the same classes in multiple projects. (like a Logger for logging to files or the console)
+
+4. Using Types in Class Libraries
+
+5. Namespaces and Class Libraries
+
+	- No specific rules apply to namespaces and class libraries
+	- Typically the namespace matches the name of the class library
+
+6. Internal vs Public
+
+- Internal types and members - Can be reached from within the same project
+
+- Public types and members - Can also be reached from any project that references the project
 
 
 

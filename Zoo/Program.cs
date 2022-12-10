@@ -1,5 +1,11 @@
 ﻿using Zoo;
 
+// simple example of using a class library
+ClassLibraryExample.Class1 class1 = new ClassLibraryExample.Class1();
+class1.Hello();
+
+// Cannot access class1.YouCannotAccessInZoo()
+
 Console.WriteLine("Zoo demos");
 
 // Inheritance
