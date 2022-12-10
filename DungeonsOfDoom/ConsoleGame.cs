@@ -1,4 +1,6 @@
-﻿namespace DungeonsOfDoom
+﻿using Utils;
+
+namespace DungeonsOfDoom
 {
     internal class ConsoleGame
     {

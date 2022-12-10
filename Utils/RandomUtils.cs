@@ -1,6 +1,6 @@
-﻿namespace DungeonsOfDoom
+﻿namespace Utils
 {
-	static class RandomUtils
+	public static class RandomUtils
 	{
 		// a seed of 100 is passed in, this way we could generate the same levels
 		private static Random _random = new(100);
