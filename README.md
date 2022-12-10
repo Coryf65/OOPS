@@ -147,10 +147,30 @@ A means of executing type specific code (without type checking)
 
 	allows derived classes to override / specialize functionality
 
-	overriding a virtual member is optional
+	overriding a virtual member is *optional*
+
+	Think of **virtual** as optionally override-able
 
 	*example:*
 	```C#
+	class Car
+	{
+		public int Speed { get; set; }
+
+		public virtual void Start()
+		{
+			Speed = 50;
+		}
+	}
+
+	class SportsCar : Car
+	{
+		// Overriding the method
+		public override void Start()
+		{
+			Speed = 100;
+		}
+	}
 	```
 
 3. Dynamic Bindings

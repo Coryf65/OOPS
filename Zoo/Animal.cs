@@ -23,9 +23,9 @@ namespace Zoo
         /// Eats an animal and gains it's weight
         /// </summary>
         /// <param name="animalToEat">The animal you are eating</param>
-        public void Eat(Animal animalToEat)
+        public virtual void Eat(Animal animalToEat)
         {
-            Console.WriteLine($"*CHOMP* ... {this.Name} just ate {animalToEat.Name}.");
+            Console.WriteLine($"*CHOMP* ... {this.Name} just ate the {animalToEat.Name}.");
             this.Weight += animalToEat.Weight;
         }
     }

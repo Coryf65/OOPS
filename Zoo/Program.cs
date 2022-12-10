@@ -5,7 +5,7 @@ Console.WriteLine("Zoo demos");
 Cat cat = new(name: "Meeka", weight: 9.3, age: 16);
 Cat cat2 = new(name: "Ivan", weight: 8.1, age: 13);
 Dog dog = new("Rocky", 150.00, 16);
-Mouse mouse = new(name: "a mouse", 1.00, 5);
+Mouse mouse = new(name: "mouse", 1.00, 5);
 
 List<Animal> animalList = new();
 
