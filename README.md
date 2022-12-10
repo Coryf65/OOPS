@@ -61,7 +61,7 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 ## Concepts
 
-[Inheritance](/OOPS#inheritance)
+[Inheritance](#inheritance)
 
 
 ### Inheritance
