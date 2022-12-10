@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace DungeonsOfDoom
 {
-    internal class Ogre : Monster
-    {    
-        public Ogre() : base("Ogre", health: 10)
-        {
-
-        }
+    interface ICarryable
+    {
+        public string Name { get; }
     }
 }

@@ -8,7 +8,7 @@ namespace DungeonsOfDoom
 {
     internal class Skeleton : Monster
     {       
-        public Skeleton() : base(health: 5)
+        public Skeleton() : base("Skeleton", health: 5)
         {
             Damage = 5;
         }

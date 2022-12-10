@@ -4,7 +4,7 @@
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public List<Item> Backpack { get; set; }
+        public List<ICarryable> Backpack { get; set; }
 
         public Player(int health, int x, int y) : base(health)
         {

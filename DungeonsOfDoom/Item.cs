@@ -1,6 +1,6 @@
 ﻿namespace DungeonsOfDoom
 {
-    abstract class Item
+    abstract class Item : ICarryable
     {
         public string Name { get; set; }
         

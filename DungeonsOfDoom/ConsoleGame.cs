@@ -92,7 +92,7 @@
             Console.WriteLine($"Health: {player.Health}");
             Console.WriteLine($"Damage: {player.Damage}");
 
-            foreach (Item item in player.Backpack)
+            foreach (ICarryable item in player.Backpack)
             {
                 Console.WriteLine(item.Name);
             }
@@ -141,27 +141,28 @@
             {
                 // monster will attack
                 AttackResult attackResult = monster.Attack(player);
-                Console.WriteLine($"Monster damaged player for '{attackResult.Damage}' damage...");
+                Console.WriteLine($"{monster.Name} attacked you for '{attackResult.Damage}' damage...");
                 Console.ReadKey(true);
 
                 if (player.IsAlive)
                 {
                     attackResult = player.Attack(monster);
-                    Console.WriteLine($"Player damaged monster for '{attackResult.Damage}' damage...");
+                    Console.WriteLine($"You struck {monster.Name} for '{attackResult.Damage}' damage...");
                     Console.ReadKey(true);
                 }
 
                 if (!monster.IsAlive)
+                {
+                    player.Backpack.Add(currentRoom.Monster);
                     currentRoom.Monster = null;
+                }
             }
 
             if (currentRoom.Item is not null)
             {
                 // player wants to pick up this item
                 player.Backpack.Add(currentRoom.Item); // example of type substitution
-
                 currentRoom.Item.Use(player);
-
                 currentRoom.Item = null; // removes item from the world
             }
         }
