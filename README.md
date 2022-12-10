@@ -116,6 +116,8 @@
 		
 		Base classes can be substituted by more derived classes
 
+		> more examples in the Zoo project
+
 		*example*
 		```C#
 		class Car

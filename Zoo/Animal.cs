@@ -18,5 +18,15 @@ namespace Zoo
             Weight = weight;
             Age = age;
         }
+
+        /// <summary>
+        /// Eats an animal and gains it's weight
+        /// </summary>
+        /// <param name="animalToEat">The animal you are eating</param>
+        public void Eat(Animal animalToEat)
+        {
+            Console.WriteLine($"*CHOMP* ... {this.Name} just ate {animalToEat.Name}.");
+            this.Weight += animalToEat.Weight;
+        }
     }
 }
