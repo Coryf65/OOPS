@@ -47,9 +47,11 @@
 
                     int percentage = random.Next(0, 100);
                     if (percentage < 5) // 50% it's an ogre
-                        world[x, y].Monster = new Ogre();
+                        world[x, y].Monster = new Ogre();  // example of type substitution
                     else if (percentage < 10) // 10% it's a skeleton
                         world[x, y].Monster = new Skeleton();                            
+                    else if (percentage < 12)
+                        world[x, y].Item = new TeleportPotion();
                     else if (percentage < 15)
                         world[x, y].Item = new Potion();
                     else if (percentage < 20)
@@ -86,7 +88,9 @@
         /// </summary>
         private void DisplayStats()
         {
+            Console.WriteLine("______________________");
             Console.WriteLine($"Health: {player.Health}");
+            Console.WriteLine($"Damage: {player.Damage}");
 
             foreach (Item item in player.Backpack)
             {
@@ -130,11 +134,34 @@
         private void EnterRoom()
         {
             Room currentRoom = world[player.X, player.Y];
+            Monster monster = currentRoom.Monster;
+
+            // handle monster in the room
+            if (monster is not null)
+            {
+                // monster will attack
+                AttackResult attackResult = monster.Attack(player);
+                Console.WriteLine($"Monster damaged player for '{attackResult.Damage}' damage...");
+                Console.ReadKey(true);
+
+                if (player.IsAlive)
+                {
+                    attackResult = player.Attack(monster);
+                    Console.WriteLine($"Player damaged monster for '{attackResult.Damage}' damage...");
+                    Console.ReadKey(true);
+                }
+
+                if (!monster.IsAlive)
+                    currentRoom.Monster = null;
+            }
 
             if (currentRoom.Item is not null)
             {
                 // player wants to pick up this item
-                player.Backpack.Add(currentRoom.Item);
+                player.Backpack.Add(currentRoom.Item); // example of type substitution
+
+                currentRoom.Item.Use(player);
+
                 currentRoom.Item = null; // removes item from the world
             }
         }

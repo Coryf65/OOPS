@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace DungeonsOfDoom
 {
     internal class Ogre : Monster
-    {
-        public Ogre() : base(10)
+    {    
+        public Ogre() : base(health: 10)
         {
 
         }
