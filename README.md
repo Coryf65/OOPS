@@ -1,5 +1,11 @@
 # OOPS
 
+> using C# and .Net to learn more about OOP while taking notes to help myself out
+
+1. DungeonsOfDoom, a C# Console App Game
+2. Excercises, some demos and tests, a C# Console App
+3. Zoo, practice implementing new lessons,a C# Console App
+
 > C# is an object-oriented programming language. The four basic principles of object-oriented programming are:
 
     **Abstraction** Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
