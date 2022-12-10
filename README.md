@@ -175,4 +175,18 @@ A means of executing type specific code (without type checking)
 
 3. Dynamic Bindings
 
+	When using type substitution, the "most overridden" member is called automatically
+
+	```csharp
+	Car[] cars new Car[2];
+	cars[0] = new Car();
+	cars[1] = new SportsCar();
+
+	foreach (Car car in cars)
+	{
+		// Dynamic Binding
+		car.Start();
+	}
+	```
+
 4. Abstract Members
