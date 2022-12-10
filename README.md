@@ -61,9 +61,9 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 ## Concept quick links
 
-[Inheritance](#inheritance)
-[Polymorphism](#polymorphism)
-[Interfaces](#interfaces)
+- [Inheritance](#inheritance)
+- [Polymorphism](#polymorphism)
+- [Interfaces](#interfaces)
 
 
 ### Inheritance
@@ -263,3 +263,6 @@ A means of executing type specific code (without type checking)
 3. What's the point?
 
 4. a Few Popular Interfaces
+
+---
+- [back to top](#oops)
