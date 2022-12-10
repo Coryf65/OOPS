@@ -59,6 +59,11 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 	Does something to the object
 	The only place to do time-consuming operations
 
+## Concepts
+
+[Inheritance](/OOPS#inheritance)
+
+
 ### Inheritance
 
 - Concept
@@ -210,3 +215,49 @@ A means of executing type specific code (without type checking)
 
 ### Interfaces
 
+	"An interface is an API contract..."
+	
+	"Classes can implement as many contracts as they see fit..."
+
+1. Creating an Interface
+
+	- Prefixed by "I", ususally not Nouns like Methods
+
+	- Members are implicitly public (and abstract)
+
+	*example*
+	```C#
+	interface IStartable
+	{
+		void Start();
+	}
+	```
+
+2. Implementing Interface
+
+	- *Implemented* by a class using a colon (as many as you like)
+
+	- Compiler verifies fulfillment of the contract
+
+	- contains no 'code', no concrete implementation, just definitions
+
+	```C#
+	class Car : Vehicle, IStartable
+	{
+		public int Speed { get; set; }
+
+		public void Start()
+		{
+			Speed = 50;
+		}
+	}
+
+	interface IStartable
+	{
+		void Start();
+	}
+	```
+
+3. What's the point?
+
+4. a Few Popular Interfaces
