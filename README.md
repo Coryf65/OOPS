@@ -7,7 +7,7 @@
     Inheritance Ability to create new abstractions based on existing abstractions.
     Polymorphism Ability to implement inherited properties or methods in different ways across multiple abstractions.
 
-- Microsoft [link](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
+Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
 
 ## What is Object Orientation ?
 
@@ -38,11 +38,11 @@
 
 ## Classes vs Object
 
-	| Class  | Object |
-	| ------------- | ------------- |
-	| "Blueprint for a building"  | "Actual building" |
-	| Resides in disk as a .cs file  | Created by calling a construtor |
-	| Always one per type | As many as your program neeeds |
+| Class  | Object |
+| ------------- | ------------- |
+| "Blueprint for a building"  | "Actual building" |
+| Resides in disk as a .cs file  | Created by calling a construtor |
+| Always one per type | As many as your program neeeds |
 
 ## Class Members
 
