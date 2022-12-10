@@ -4,7 +4,7 @@
     {
         Player player;
         Room[,] world;
-        Random random = new();
+        //Random random = new();
 
         /// <summary>
         /// Main Game loop
@@ -20,7 +20,7 @@
                 DisplayWorld();
                 DisplayStats();
                 AskForMovement();
-            } while (player.IsAlive);
+            } while (player.IsAlive && Monster.TotalMonsters > 0);
 
             GameOver();
         }
@@ -45,7 +45,7 @@
                 {
                     world[x, y] = new Room();
 
-                    int percentage = random.Next(0, 100);
+                    int percentage = RandomUtils.Percentage();
                     if (percentage < 5) // 50% it's an ogre
                         world[x, y].Monster = new Ogre();  // example of type substitution
                     else if (percentage < 10) // 10% it's a skeleton
@@ -88,9 +88,10 @@
         /// </summary>
         private void DisplayStats()
         {
-            Console.WriteLine("______________________");
+            Console.WriteLine("\n______ Your Stats ______");
             Console.WriteLine($"Health: {player.Health}");
             Console.WriteLine($"Damage: {player.Damage}");
+			Console.WriteLine($"Total Monsters left: {Monster.TotalMonsters}");
 
             foreach (ICarryable item in player.Backpack)
             {
@@ -141,7 +142,7 @@
             {
                 // monster will attack
                 AttackResult attackResult = monster.Attack(player);
-                Console.WriteLine($"{monster.Name} attacked you for '{attackResult.Damage}' damage...");
+                Console.WriteLine($"{monster.Name} ♥{attackResult.Attacker.Health} attacked you for '{attackResult.Damage}' damage...");
                 Console.ReadKey(true);
 
                 if (player.IsAlive)
@@ -173,7 +174,18 @@
         private void GameOver()
         {
             Console.Clear();
-            Console.WriteLine("Game over...");
+            
+            if (Monster.TotalMonsters > 0)
+            {
+				Console.WriteLine("Game over...");
+			} 
+
+            if (Monster.TotalMonsters <= 0)
+            {
+                Console.WriteLine("YOU WIN !!! you have defeated all the monsters!!");
+                Console.WriteLine("\n\n press any key to play again");
+            }            
+            
             Console.ReadKey();
             Play();
         }

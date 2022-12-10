@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DungeonsOfDoom
+﻿namespace DungeonsOfDoom
 {
     internal class Ogre : Monster
     {    
-        public Ogre() : base("Ogre", health: 10)
+        public Ogre() : base("Ogre", health: RandomUtils.Percentage() < 50 ? 10 : 20)
         {
 
         }

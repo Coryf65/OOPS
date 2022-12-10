@@ -8,7 +8,7 @@ namespace DungeonsOfDoom
 {
     abstract class Character
     {
-        public int Health { get; set; }
+        public virtual int Health { get; set; }
         public bool IsAlive { get { return Health > 0; } }
         public int Damage { get; set; } = 10;
 
