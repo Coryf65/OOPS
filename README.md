@@ -358,10 +358,26 @@ Console.WriteLine(person.Name);
 
 // static members are called on the class
 Console.WriteLine(Person.InstanceCount);
-
 ```
 
 - Writing Utility Classes
+
+The main usuage for static classes
+	- like 'Console', 'File', 'String'
+
+*example*
+```C#
+static class StringUtils
+{
+  public static bool IsNumeric(string value)
+  {
+    return int.TryParse(value, out int i);
+  }
+}
+
+bool b1 StringUtils.IsNumeric("Test"); // false
+bool b1 StringUtils.IsNumeric("10"); // true
+```
 
 - Static Constructors
 
