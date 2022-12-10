@@ -27,14 +27,14 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 ## What is the point ?
 
-	- Productivity
-		Complexity is typically hidden behind an easy-to-understand API
+- Productivity
+	Complexity is typically hidden behind an easy-to-understand API
 
-	- Code reuse
-		Through *inheritance*
+- Code reuse
+	Through *inheritance*
 
-	- Maintainability
-		Through *polymorphism*
+- Maintainability
+	Through *polymorphism*
 
 ## Classes vs Object
 
