@@ -1,6 +1,8 @@
-﻿namespace DungeonsOfDoom
+﻿using DungeonsOfDoom.Core.Characters;
+
+namespace DungeonsOfDoom.Core.Items
 {
-    internal class Potion : Item
+    public class Potion : Item
     {
         public Potion() : base("Potion")
         {

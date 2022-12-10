@@ -1,9 +1,9 @@
 ﻿using Utils;
 
-namespace DungeonsOfDoom
+namespace DungeonsOfDoom.Core.Characters
 {
-    internal class Skeleton : Monster
-    {       
+    public class Skeleton : Monster
+    {
         public Skeleton() : base("Skeleton", health: RandomUtils.DiceRoll(6))
         {
             Damage = 5;

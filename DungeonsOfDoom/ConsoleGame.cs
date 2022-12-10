@@ -1,4 +1,7 @@
-﻿using Utils;
+﻿using DungeonsOfDoom.Core;
+using DungeonsOfDoom.Core.Characters;
+using DungeonsOfDoom.Core.Items;
+using Utils;
 
 namespace DungeonsOfDoom
 {

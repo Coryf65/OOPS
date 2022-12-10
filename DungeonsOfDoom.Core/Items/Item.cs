@@ -1,9 +1,11 @@
-﻿namespace DungeonsOfDoom
+﻿using DungeonsOfDoom.Core.Characters;
+
+namespace DungeonsOfDoom.Core.Items
 {
-    abstract class Item : ICarryable
+    public abstract class Item : ICarryable
     {
         public string Name { get; set; }
-        
+
         public Item(string name)
         {
             Name = name;

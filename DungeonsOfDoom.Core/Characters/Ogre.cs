@@ -1,9 +1,9 @@
 ﻿using Utils;
 
-namespace DungeonsOfDoom
+namespace DungeonsOfDoom.Core.Characters
 {
-    internal class Ogre : Monster
-    {    
+    public class Ogre : Monster
+    {
         public Ogre() : base("Ogre", health: RandomUtils.Percentage() < 50 ? 10 : 20)
         {
 

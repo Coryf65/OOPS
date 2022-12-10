@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DungeonsOfDoom.Core.Characters;
 
-namespace DungeonsOfDoom
+namespace DungeonsOfDoom.Core
 {
-    internal class AttackResult
+    public class AttackResult
     {       
         public Character Attacker { get; set; }
         public Character Opponent { get; set; }

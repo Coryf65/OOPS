@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DungeonsOfDoom
+﻿namespace DungeonsOfDoom.Core.Characters
 {
-    abstract class Character
+    public abstract class Character
     {
         public virtual int Health { get; set; }
         public bool IsAlive { get { return Health > 0; } }
@@ -16,7 +10,7 @@ namespace DungeonsOfDoom
         {
             Health = health;
         }
-        
+
         /// <summary>
         /// a defualt implementation for attacking, does 10 damage
         /// </summary>

@@ -1,6 +1,8 @@
-﻿namespace DungeonsOfDoom
+﻿using DungeonsOfDoom.Core.Characters;
+
+namespace DungeonsOfDoom.Core.Items
 {
-    internal class TeleportPotion : Item
+    public class TeleportPotion : Item
     {
         public TeleportPotion() : base("Teleportation Potion")
         {

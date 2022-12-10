@@ -1,6 +1,8 @@
-﻿namespace DungeonsOfDoom
+﻿using DungeonsOfDoom.Core.Items;
+
+namespace DungeonsOfDoom.Core.Characters
 {
-    internal class Player : Character
+    public class Player : Character
     {
         public int X { get; set; }
         public int Y { get; set; }
