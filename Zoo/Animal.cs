@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    public abstract class Animal
+    public abstract class Animal : IEdible
     {
         public string Name { get; set; }
         public double Weight { get; set; }
@@ -21,10 +21,15 @@ namespace Zoo
             MakeSound();
         }
         
-        public virtual void Eat(Animal animalToEat)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="animalToEat"></param>
+        public virtual void Eat(IEdible edible)
         {
-            Console.WriteLine($"*CHOMP* ... {this.Name} just ate the {animalToEat.Name}.");
-            this.Weight += animalToEat.Weight;
+            // example of interfaces
+            Console.WriteLine($"*CHOMP* ... {this.Name} just ate.");
+            this.Weight += edible.Weight;
         }
 
         public abstract void MakeSound(); // Abstract Member

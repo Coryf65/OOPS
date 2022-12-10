@@ -26,6 +26,12 @@ Console.WriteLine($"See the weight of all our animals");
 foreach (var animal in animalList)
 {
     // example of Dynamic Binding / Dynamic Execution
-    animal.Eat(mouse);
+    if (animal is Cat)
+    {
+        animal.Eat(mouse); // example of interfaces
+    } else
+    {
+        animal.Eat(new Grass(1)); // example of interfaces
+    }
     Console.WriteLine($"{animal.Name} weighs {animal.Weight} lbs.");
 }

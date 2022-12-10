@@ -275,7 +275,54 @@ interface IStartable
 
 3. What's the point?
 
-4. a Few Popular Interfaces
+	- Allows us to be more pragmatic about our requirements
+		Focus on what classes *can do*, rather than who they inherit from...
+
+	example: If you needed help gardening. It does not matter if your friend has been gardening for generations. All that matters is that you can garden.
+
+```C#
+void StartSomething(IStartable startable)
+{
+  startable.Start();
+}
+
+StartSomething(new Car());
+StartSomething(new Vacation());
+StartSomething(new Program());
+```
+
+4. a Few Popular Interfaces in **.Net**
+
+- IEnumerable
+	- GetEnumerator() (we are able to use a foreach loop with this Interface)
+
+- ICollection
+	- Count (we can always see how many items are in the given collection) etc
+
+- IList
+	- Add(), Clear(), etc
+
+- IComparable
+	- CompareTo() (compare 2 instance of a class to another for example to sort alphabetically)
+
+some examples in the Zoo project
+
+5. More Notes on Interfaces
+
+- Interfaces can implement other interfaces
+
+	- Just to be D.R.Y.
+
+- Explicit interface implementation
+
+	- To resolve name collisions
+	- If we have 2 interfaces that have the same method. We have to specify which is for which interface.
+
+- Default Interface Methods (seldom do, but possible)
+
+	- Not to break current implementations
+
+	- Have a method in the interface have a default implementation
 
 ---
 - [back to top](#oops)
