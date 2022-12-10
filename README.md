@@ -46,113 +46,113 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 ## Class Members
 
-	- Constructors
-		Sets the *state* of the object (usually assigning values to props)
+- Constructors
+	Sets the *state* of the object (usually assigning values to props)
 
-	- Fields
-		Contains the *data* of the object
+- Fields
+	Contains the *data* of the object
 
-	- Properties
-		Exposes the data of the object
+- Properties
+	Exposes the data of the object
 
-	- Methods
-		Does something to the object
-		The only place to do time-consuming operations
+- Methods
+	Does something to the object
+	The only place to do time-consuming operations
 
 ### Inheritance
 
-	- Concept
+- Concept
 		
-		Used primarily for code re-use (the derived classes inherits the members of the base class)
+	Used primarily for code re-use (the derived classes inherits the members of the base class)
 
-	- The Is-a Rule
+- The Is-a Rule
 
-		A [Sub class / Derived] *is a* [Base class / Super class]
-		Example: A Cat is an Animal
+	A [Sub class / Derived] *is a* [Base class / Super class]
+	Example: A Cat is an Animal
 
-		```C#
-		class Cat : Animal { }
-		```
+	```C#
+	class Cat : Animal { }
+	```
 
-	- The Object class
+- The Object class
 
-		At the "top" of the inheritance chain is a class called object.
+	At the "top" of the inheritance chain is a class called object.
 
-		Example: We have many methods without creating them. like *.ToString() .GetType()*
+	Example: We have many methods without creating them. like *.ToString() .GetType()*
 
-	- Single vs. Mulitple Inheritance
+- Single vs. Mulitple Inheritance
 
-		- Languages such as C# and Java support single inheritance
+	- Languages such as C# and Java support single inheritance
 
-			A class can have *only one* direct base class
+		A class can have *only one* direct base class
 
-		- Languages such as C++ allows for multiple inheritance
+	- Languages such as C++ allows for multiple inheritance
 
-			A class can have *multiple* direct base classes
+		A class can have *multiple* direct base classes
 
-	- Inheritance and Constructors
+- Inheritance and Constructors
 
-	- Abstract Classes
+- Abstract Classes
 
-		- Used only to provide code reuse to derived classes. Has code that is useful to the sub classes.
-			Like a note to other devs saying please do not instaniate this class but use it to inherit from only.
+	- Used only to provide code reuse to derived classes. Has code that is useful to the sub classes.
+		Like a note to other devs saying please do not instaniate this class but use it to inherit from only.
 
-		- Can *not* be instantiated
+	- Can *not* be instantiated
 
-		- By specifying a class as abstract you say
+	- By specifying a class as abstract you say
 			
-		"This class exists only to be inherited from"
+	"This class exists only to be inherited from"
 
-		we do not need instances of **Animal** but the **Cat** which inherits from **Animal**
+	we do not need instances of **Animal** but the **Cat** which inherits from **Animal**
 
-		```C#
-		abstract class Animal {}
-		```
+	```C#
+	abstract class Animal {}
+	```
 
 ### Polymorphism
 
-	A means of executing type specific code (without type checking)
+A means of executing type specific code (without type checking)
 
-	1. Type substitution
+1. Type substitution
 		
-		Base classes can be substituted by more derived classes
+	Base classes can be substituted by more derived classes
 
-		> more examples in the Zoo project
+	> more examples in the Zoo project
 
-		*example*
-		```C#
-		class Car
-		{
-			public int Speed { get; set; }
-		}
+	*example*
+	```C#
+	class Car
+	{
+		public int Speed { get; set; }
+	}
 
-		class SportsCar : Car
-		{
+	class SportsCar : Car
+	{
 
-		}
+	}
 
-		static void StopCar(Car car)
-		{
-			car.Speed = 0;
-		}
+	static void StopCar(Car car)
+	{
+		car.Speed = 0;
+	}
 
-		StopCar(new Car());
+	StopCar(new Car());
 
-		// Type Substitution, pass any class that inherits 'Car'
-		// The sports car is a car
-		StopCar(new SportsCar());
-		```
+	// Type Substitution, pass any class that inherits 'Car'
+	// The sports car is a car
+	StopCar(new SportsCar());
+	```
 
-	2. Virtual Members
+2. Virtual Members
 
-		allows derived classes to override / specialize functionality
+	allows derived classes to override / specialize functionality
 
-		overriding a virtual member is optional
+	overriding a virtual member is optional
 
-		*example:*
-		```C#
-		```
+	*example:*
+	```C#
+	```
 
-	3. Dynamic Bindings
+3. Dynamic Bindings
 
-	4. Abstract Members
+4. Abstract Members
