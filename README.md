@@ -330,9 +330,9 @@ ___
 
 - The effects of making a **class** static
 
-	[x] The class may *only* contain static members
-	[x] The class **cannot** be instantiated
-	[x] The class **cannot** be derived from
+	- [x] The class may *only* contain static members
+	- [x] The class **cannot** be instantiated
+	- [x] The class **cannot** be derived from
 
 - Static Members
 
