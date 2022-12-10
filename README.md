@@ -59,9 +59,11 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 	Does something to the object
 	The only place to do time-consuming operations
 
-## Concepts
+## Concept quick links
 
 [Inheritance](#inheritance)
+[Polymorphism](#polymorphism)
+[Interfaces](#interfaces)
 
 
 ### Inheritance
