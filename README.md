@@ -101,6 +101,15 @@
 
 - Inheritance and Constructors
 
+### Abstraction
+---
+
+The meaning of abstraction is, you don't need to explain everything. In our real life, we have vehicles such as cars, motorcycles and scooters. People only know how to drive these vehicles. It's not necessary to know how the vehicle runs or how petrol or diesel works in that vehicle.
+ 
+So when we define an abstract we don't need to explain everything. It's a type of class, but you cannot create an instance (object) of it. In other words you cannot create an instance of the class. Now you might ask why do we not create an instance of an abstract class? The answer is that when we create or define an abstract class, it's not complete.
+ 
+You must inherit this class and define its methods and properties on this new derived class.
+
 - Abstract Classes
 
 	- Used only to provide code reuse to derived classes. Has code that is useful to the sub classes.
@@ -118,15 +127,23 @@
 	abstract class Animal {}
 	```
 
-### Abstraction
----
+- Abstract Members
 
-The meaning of abstraction is, you don't need to explain everything. In our real life, we have vehicles such as cars, motorcycles and scooters. People only know how to drive these vehicles. It's not necessary to know how the vehicle runs or how petrol or diesel works in that vehicle.
- 
-So when we define an abstract we don't need to explain everything. It's a type of class, but you cannot create an instance (object) of it. In other words you cannot create an instance of the class. Now you might ask why do we not create an instance of an abstract class? The answer is that when we create or define an abstract class, it's not complete.
- 
-You must inherit this class and define its methods and properties on this new derived class.
+	- Only *abstract classes* may contain abstract members
 
+	- Abstract members *are not* implemented
+
+	- Overriding an abstract *member* **is Mandatory**
+
+		for example if we created a sub class of *SportsCar* we would need to implement the Start method
+
+	```C#
+	abstract class Car
+	{
+		public int Speed { get; set; }
+		public abstract void Start(); // don't implement'
+	}
+	```
 
 ### Polymorphism
 ---
@@ -207,24 +224,6 @@ A means of executing type specific code (without type checking)
 		// Dynamic Binding
 		// so now the car's speed will be 100 if it's a sports car
 		car.Start();
-	}
-	```
-
-4. Abstract Members
-
-	- Only *abstract classes* may contain abstract members
-
-	- Abstract members *are not* implemented
-
-	- Overriding an abstract *member* **is Mandatory**
-
-		for example if we created a sub class of *SportsCar* we would need to implement the Start method
-
-	```C#
-	abstract class Car
-	{
-		public int Speed { get; set; }
-		public abstract void Start(); // don't implement'
 	}
 	```
 
