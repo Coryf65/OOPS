@@ -71,8 +71,9 @@
 - [Abstraction](#abstraction)
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
-- [Static Classes](#staticclasses)
-- [Class Libraries](#classlibraries)
+- [Static Classes](#static-classes)
+- [Class Libraries](#class-libraries)
+- [Reference and Value Types](#reference-and-value-types)
 
 
 ### Inheritance
@@ -474,6 +475,19 @@ Person p = new();
 
 - Public types and members - Can also be reached from any project that references the project
 
+### Reference and Value Types
+
+- differences
+
+- Structs and Inheritance
+
+- When to use which ?
+
+- Boxing and UnBoxing
+
+- Nullable Value Types
+
+- Nullable Reference Types
 
 
 ---
