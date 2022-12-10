@@ -7,7 +7,7 @@
     Inheritance Ability to create new abstractions based on existing abstractions.
     Polymorphism Ability to implement inherited properties or methods in different ways across multiple abstractions.
 
-Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
+- Microsoft [link to docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
 
 ## What is Object Orientation ?
 
@@ -27,14 +27,14 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 ## What is the point ?
 
-- Productivity
-	Complexity is typically hidden behind an easy-to-understand API
+- **Productivity**
+	- Complexity is typically hidden behind an easy-to-understand API
 
-- Code reuse
-	Through *inheritance*
+- **Code reuse**
+	- Through *inheritance*
 
-- Maintainability
-	Through *polymorphism*
+- **Maintainability**
+	- Through *polymorphism*
 
 ## Classes vs Object
 
@@ -46,18 +46,18 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 ## Class Members
 
-- Constructors
-	Sets the *state* of the object (usually assigning values to props)
+- **Constructors**
+	- Sets the *state* of the object (usually assigning values to props)
 
-- Fields
-	Contains the *data* of the object
+- **Fields**
+	- Contains the *data* of the object
 
-- Properties
-	Exposes the data of the object
+- **Properties**
+	- Exposes the data of the object
 
-- Methods
-	Does something to the object
-	The only place to do time-consuming operations
+- **Methods**
+	- Does something to the object
+	- The only place to do time-consuming operations
 
 ## Concept quick links
 
@@ -67,6 +67,7 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 
 
 ### Inheritance
+---
 
 - Concept
 		
@@ -117,6 +118,7 @@ Microsoft definition [link](https://learn.microsoft.com/en-us/dotnet/csharp/fund
 	```
 
 ### Polymorphism
+---
 
 A means of executing type specific code (without type checking)
 
@@ -216,6 +218,7 @@ A means of executing type specific code (without type checking)
 	```
 
 ### Interfaces
+---
 
 	"An interface is an API contract..."
 	
