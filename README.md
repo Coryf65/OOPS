@@ -79,9 +79,9 @@
 	A [Sub class / Derived] *is a* [Base class / Super class]
 	Example: A Cat is an Animal
 
-	```C#
-	class Cat : Animal { }
-	```
+```C#
+class Cat : Animal { }
+```
 
 - The Object class
 
@@ -123,9 +123,9 @@ You must inherit this class and define its methods and properties on this new de
 
 	we do not need instances of **Animal** but the **Cat** which inherits from **Animal**
 
-	```C#
-	abstract class Animal {}
-	```
+```C#
+abstract class Animal {}
+```
 
 - Abstract Members
 
@@ -137,13 +137,13 @@ You must inherit this class and define its methods and properties on this new de
 
 		for example if we created a sub class of *SportsCar* we would need to implement the Start method
 
-	```C#
-	abstract class Car
-	{
-		public int Speed { get; set; }
-		public abstract void Start(); // don't implement'
-	}
-	```
+```C#
+abstract class Car
+{
+	public int Speed { get; set; }
+	public abstract void Start(); // don't implement'
+}
+```
 
 ### Polymorphism
 ---
@@ -157,28 +157,28 @@ A means of executing type specific code (without type checking)
 	> more examples in the Zoo project
 
 	*example*
-	```C#
-	class Car
-	{
-		public int Speed { get; set; }
-	}
+```C#
+class Car
+{
+	public int Speed { get; set; }
+}
 
-	class SportsCar : Car
-	{
+class SportsCar : Car
+{
 
-	}
+}
 
-	static void StopCar(Car car)
-	{
-		car.Speed = 0;
-	}
+static void StopCar(Car car)
+{
+	car.Speed = 0;
+}
 
-	StopCar(new Car());
+StopCar(new Car());
 
-	// Type Substitution, pass any class that inherits 'Car'
-	// The sports car is a car
-	StopCar(new SportsCar());
-	```
+// Type Substitution, pass any class that inherits 'Car'
+// The sports car is a car
+StopCar(new SportsCar());
+```
 
 2. Virtual Members
 
@@ -189,43 +189,43 @@ A means of executing type specific code (without type checking)
 	Think of **virtual** as optionally override-able
 
 	*example:*
-	```C#
-	class Car
-	{
-		public int Speed { get; set; }
+```C#
+class Car
+{
+	public int Speed { get; set; }
 
-		public virtual void Start()
-		{
-			Speed = 50;
-		}
-	}
-
-	class SportsCar : Car
+	public virtual void Start()
 	{
-		// Overriding the method
-		public override void Start()
-		{
-			Speed = 100;
-		}
+		Speed = 50;
 	}
-	```
+}
+
+class SportsCar : Car
+{
+	// Overriding the method
+	public override void Start()
+	{
+		Speed = 100;
+	}
+}
+```
 
 3. Dynamic Bindings
 
 	When using type substitution, the "most overridden" member is called automatically
 
-	```csharp
-	Car[] cars new Car[2];
-	cars[0] = new Car();
-	cars[1] = new SportsCar();
+```csharp
+Car[] cars new Car[2];
+cars[0] = new Car();
+cars[1] = new SportsCar();
 
-	foreach (Car car in cars)
-	{
-		// Dynamic Binding
-		// so now the car's speed will be 100 if it's a sports car
-		car.Start();
-	}
-	```
+foreach (Car car in cars)
+{
+	// Dynamic Binding
+	// so now the car's speed will be 100 if it's a sports car
+	car.Start();
+}
+```
 
 ### Interfaces
 ---
@@ -240,13 +240,13 @@ A means of executing type specific code (without type checking)
 
 	- Members are implicitly public (and abstract)
 
-	*example*
-	```C#
-	interface IStartable
-	{
-		void Start();
-	}
-	```
+*example*
+```C#
+interface IStartable
+{
+	void Start();
+}
+```
 
 2. Implementing Interface
 
@@ -256,22 +256,22 @@ A means of executing type specific code (without type checking)
 
 	- contains no 'code', no concrete implementation, just definitions
 
-	```C#
-	class Car : Vehicle, IStartable
-	{
-		public int Speed { get; set; }
+```C#
+class Car : Vehicle, IStartable
+{
+	public int Speed { get; set; }
 
-		public void Start()
-		{
-			Speed = 50;
-		}
-	}
-
-	interface IStartable
+	public void Start()
 	{
-		void Start();
+		Speed = 50;
 	}
-	```
+}
+
+interface IStartable
+{
+	void Start();
+}
+```
 
 3. What's the point?
 
