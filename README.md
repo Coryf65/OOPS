@@ -5,7 +5,8 @@
 1. DungeonsOfDoom, a C# Console App Game
 2. Excercises, some demos and tests, a C# Console App
 3. Zoo, practice implementing new lessons, a C# Console App
-4. Demo, C# console app
+4. OODemo an example of the wrong kind of inheritance, C# console app
+5. BetterOODemo an example of imporving the inheritance using interfaces too, C# console app
 
 > C# is an object-oriented programming language. The four basic principles of object-oriented programming are:
 > - **Abstraction** Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
@@ -14,6 +15,102 @@
 > - **Polymorphism** Ability to implement inherited properties or methods in different ways across multiple abstractions.
 
 > definition by: Microsoft [link to docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
+
+## Concept quick links
+
+- [The C# Language](#the-c#-language)
+- [Inheritance](#inheritance)
+- [Abstraction](#abstraction)
+- [Polymorphism](#polymorphism)
+- [Interfaces](#interfaces)
+- [Static Classes](#static-classes)
+- [Class Libraries](#class-libraries)
+- [Reference and Value Types](#reference-and-value-types)
+
+## The C# Language
+
+What is C#?
+
+> It is an object-oriented programming language created by Microsoft that runs on the .NET Framework.
+> C# has roots from the C family, and the language is close to other popular languages like C++ and Java.
+> The first version was released in year 2002. The latest version, C# 11, was released in November 2022.
+>
+> C# is used for:
+>
+>		Mobile applications
+>		Desktop applications
+>		Web applications
+>		Web services
+>		Web sites
+>		Games
+>		VR
+>		Database applications
+>		And much, much more!
+> definition from [W3 Schools](https://www.w3schools.com/cs/cs_intro.php)
+
+A. Types
+
+	- Simple Types 
+		___
+		- Singed integral: `sbyte`, `short`, `int`, `long`
+		- Unsigned integral: `byte`, `ushort`, `uint`, `ulong`
+		- Unicode characters: `char` "a UTF-16 code unit"
+		- IEEE binary floating-point: `float`, `double`
+		- High-Precision decimal floating-point: `decimal`
+		- Boolean: `bool` "containing values of `true` or `false`"
+		- Enum Types
+			- user defined `enum name {...}`
+			- example:
+			```C#
+			public enum SomeRootVegetable
+			{
+				HorseRadish,
+				Radish,
+				Turnip
+			}
+			```
+		- Struct types
+			- user defined `struct name {...}`
+			- example:
+			```C#
+			public struct Point
+			{
+				public double X { get; }
+				public double Y { get; }
+    
+				public Point(double x, double y) => (X, Y) = (x, y);
+			}
+			```
+		- Nullable Value types
+			- example:
+			```C#
+			int? optionalInt = default; 
+			optionalInt = 5;
+			string? optionalText = default;
+			optionalText = "Hello World.";
+			```
+		- Tuple value types
+			- user defined `(T1, T2, ...)`
+			- example: 
+			```C#
+			(double Sum, int Count) t2 = (4.5, 3);
+			Console.WriteLine($"Sum of {t2.Count} elements is {t2.Sum}.");
+			//Output:
+			//Sum of 3 elements is 4.5.
+			```
+	- Reference Types
+		___
+		- Class types
+			- *Top Level class* `object`
+			- Unicode strings: `string name = "some text";`
+			- user defined types in the form of `class ClassName {...}`
+		- Interface types
+			- user defined `interface IName {...}`
+		- Array types
+			- Single-dimensional, multi-dimensional, and jagged. For example: `int[]`, `int[,]`, and `int[][]`
+		- Delegate types
+			- user defined `delegate int Name(...)`
+___
 
 ## What is Object Orientation ?
 
@@ -64,17 +161,6 @@
 - **Methods**
 	- Does something to the object
 	- The only place to do time-consuming operations
-
-## Concept quick links
-
-- [Inheritance](#inheritance)
-- [Abstraction](#abstraction)
-- [Polymorphism](#polymorphism)
-- [Interfaces](#interfaces)
-- [Static Classes](#static-classes)
-- [Class Libraries](#class-libraries)
-- [Reference and Value Types](#reference-and-value-types)
-
 
 ### Inheritance
 ---
@@ -551,6 +637,14 @@ static void Foo(object value)
 	// UnBoxing the object (by casting it back into it's original type)
 	int myInt = (int)value;
 }
+```
+
+additional example of boxing and unboxing:
+
+```C#
+int i = 123;
+object o = i;    // Boxing
+int j = (int)o;  // Unboxing
 ```
 
 > Ususally useful if we are using some code out of our control where we can work around the limitations
