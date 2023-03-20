@@ -50,69 +50,77 @@ What is C#?
 
 A. Types
 
-	- Simple Types 
-		___
-		- Singed integral: `sbyte`, `short`, `int`, `long`
-		- Unsigned integral: `byte`, `ushort`, `uint`, `ulong`
-		- Unicode characters: `char` "a UTF-16 code unit"
-		- IEEE binary floating-point: `float`, `double`
-		- High-Precision decimal floating-point: `decimal`
-		- Boolean: `bool` "containing values of `true` or `false`"
-		- Enum Types
-			- user defined `enum name {...}`
-			- example:
-			```C#
-			public enum SomeRootVegetable
-			{
-				HorseRadish,
-				Radish,
-				Turnip
-			}
-			```
-		- Struct types
-			- user defined `struct name {...}`
-			- example:
-			```C#
-			public struct Point
-			{
-				public double X { get; }
-				public double Y { get; }
-    
-				public Point(double x, double y) => (X, Y) = (x, y);
-			}
-			```
-		- Nullable Value types
-			- example:
-			```C#
-			int? optionalInt = default; 
-			optionalInt = 5;
-			string? optionalText = default;
-			optionalText = "Hello World.";
-			```
-		- Tuple value types
-			- user defined `(T1, T2, ...)`
-			- example: 
-			```C#
-			(double Sum, int Count) t2 = (4.5, 3);
-			Console.WriteLine($"Sum of {t2.Count} elements is {t2.Sum}.");
-			//Output:
-			//Sum of 3 elements is 4.5.
-			```
-	- Reference Types
-		___
-		- Class types
-			- *Top Level class* `object`
-			- Unicode strings: `string name = "some text";`
-			- user defined types in the form of `class ClassName {...}`
-		- Interface types
-			- user defined `interface IName {...}`
-		- Array types
-			- Single-dimensional, multi-dimensional, and jagged. For example: `int[]`, `int[,]`, and `int[][]`
-		- Delegate types
-			- user defined `delegate int Name(...)`
+- Simple Types 
+	___
+	- Singed integral: `sbyte`, `short`, `int`, `long`
+	- Unsigned integral: `byte`, `ushort`, `uint`, `ulong`
+	- Unicode characters: `char` "a UTF-16 code unit"
+	- IEEE binary floating-point: `float`, `double`
+	- High-Precision decimal floating-point: `decimal`
+	- Boolean: `bool` "containing values of `true` or `false`"
+	- Enum Types
+		- user defined `enum name {...}`
+		- example:
+		```C#
+		public enum SomeRootVegetable
+		{
+			HorseRadish,
+			Radish,
+			Turnip
+		}
+		```
+	- Struct types
+		- user defined `struct name {...}`
+		- example:
+		```C#
+		public struct Point
+		{
+			public double X { get; }
+			public double Y { get; }
+
+			public Point(double x, double y) => (X, Y) = (x, y);
+		}
+		```
+	- Nullable Value types
+		- example:
+		```C#
+		int? optionalInt = default; 
+		optionalInt = 5;
+		string? optionalText = default;
+		optionalText = "Hello World.";
+		```
+	- Tuple value types
+		- user defined `(T1, T2, ...)`
+		- example: 
+		```C#
+		(double Sum, int Count) t2 = (4.5, 3);
+		Console.WriteLine($"Sum of {t2.Count} elements is {t2.Sum}.");
+		//Output:
+		//Sum of 3 elements is 4.5.
+		```
+- Reference Types
+	___
+	- Class types
+		- *Top Level class* `object`
+		- Unicode strings: `string name = "some text";`
+		- user defined types in the form of `class ClassName {...}`
+	- Interface types
+		- user defined `interface IName {...}`
+	- Array types
+		- Single-dimensional, multi-dimensional, and jagged. For example: `int[]`, `int[,]`, and `int[][]`
+	- Delegate types
+		- user defined `delegate int Name(...)`
 ___
 
 ## What is Object Orientation ?
+
+C# is an object-oriented programming language. The four basic principles of object-oriented programming are:
+
+  - **Abstraction** Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
+  - **Encapsulation** Hiding the internal state and functionality of an object and only allowing access through a public set of functions.
+  - **Inheritance** Ability to create new abstractions based on existing abstractions.
+  - **Polymorphism** Ability to implement inherited properties or methods in different ways across multiple abstractions.
+
 
 1. Using classes as containers for related logic
 
@@ -216,10 +224,10 @@ b. Single vs. Mulitple Inheritance
 
 **Concept** 
 
-The meaning of abstraction is, you don't need to explain everything. In our real life, we have vehicles such as cars, motorcycles and scooters. People only know how to drive these vehicles. It's not necessary to know how the vehicle runs or how petrol or diesel works in that vehicle.
- 
+The meaning of abstraction is, you don't need to explain everything. In our real life, we have vehicles such as cars, motorcyclesÂ and scooters. People only know how to drive these vehicles. It's not necessary to know how the vehicle runs or how petrol or diesel works in that vehicle.
+Â 
 So when we define an abstract we don't need to explain everything. It's a type of class, but you cannot create an instance (object) of it. In other words you cannot create an instance of the class. Now you might ask why do we not create an instance of an abstract class? The answer is that when we create or define an abstract class, it's not complete.
- 
+Â 
 You must inherit this class and define its methods and properties on this new derived class.
 
 - Abstract Classes
