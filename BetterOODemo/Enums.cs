@@ -1,4 +1,4 @@
-﻿namespace OODemo;
+﻿namespace BetterOODemo;
 
 public enum CarType
 {

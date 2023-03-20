@@ -100,6 +100,12 @@ class Cat : Animal { }
 
 - Inheritance can put you in a corner
 
+	- example in : OODEMO, there we have a `RentalBoat` and a `RentalCar` that inherit from `RentalVehicle`.
+	but we get stuck with how things are designed and may not need all parts. A Sailboat does not have an engine so we 
+	had to override the start and stop engine to throw an error. Which could create institutional knowledge
+	to know never to call those from a sailboat. Which could be the same fo from class that sends data to a DB. Where 
+	one person may know not to call certains methods but not another person.
+
 - need to ask the question what is the point of doing inheritance when implementing it
 
 a. The Object class
