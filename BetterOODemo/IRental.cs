@@ -1,4 +1,6 @@
 ﻿// we have rentals and vehicles
+namespace BetterOODemo;
+
 public interface IRental
 {
     int RentalId { get; set; }

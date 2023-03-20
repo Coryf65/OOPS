@@ -1,6 +1,5 @@
 ﻿// we have rentals and vehicles
-
-using BetterOODemo;
+namespace BetterOODemo;
 
 public class Truck : LandVehicle, IRental
 {

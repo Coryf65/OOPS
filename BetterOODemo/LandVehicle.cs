@@ -1,4 +1,7 @@
 ﻿// we have rentals and vehicles
+
+namespace BetterOODemo;
+
 public class LandVehicle
 {
     public int NumberOfPassengers { get; set; }
