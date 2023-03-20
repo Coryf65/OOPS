@@ -4,16 +4,16 @@
 
 1. DungeonsOfDoom, a C# Console App Game
 2. Excercises, some demos and tests, a C# Console App
-3. Zoo, practice implementing new lessons,a C# Console App
+3. Zoo, practice implementing new lessons, a C# Console App
+4. Demo, C# console app
 
 > C# is an object-oriented programming language. The four basic principles of object-oriented programming are:
+> - **Abstraction** Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
+> - **Encapsulation** Hiding the internal state and functionality of an object and only allowing access through a public set of functions.
+> - **Inheritance** Ability to create new abstractions based on existing abstractions.
+> - **Polymorphism** Ability to implement inherited properties or methods in different ways across multiple abstractions.
 
-    **Abstraction** Modeling the relevant attributes and interactions of entities as classes to define an abstract representation of a system.
-    **Encapsulation** Hiding the internal state and functionality of an object and only allowing access through a public set of functions.
-    **Inheritance** Ability to create new abstractions based on existing abstractions.
-    **Polymorphism** Ability to implement inherited properties or methods in different ways across multiple abstractions.
-
-- Microsoft [link to docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
+> definition by: Microsoft [link to docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
 
 ## What is Object Orientation ?
 
@@ -79,11 +79,11 @@
 ### Inheritance
 ---
 
-- Concept
-		
-	Used primarily for code re-use (the derived classes inherits the members of the base class)
+**Concept**
 
-- The Is-a Rule
+Used primarily for code re-use (the derived classes inherits the members of the base class)
+
+- The *Is-a* Rule
 
 	A [Sub class / Derived] *is a* [Base class / Super class]
 	Example: A Cat is an Animal
@@ -92,13 +92,23 @@
 class Cat : Animal { }
 ```
 
-- The Object class
+- Is **NOT** code-sharing
+
+- Needs to share common logic
+
+- Sharing just props or method signatures is not enough
+
+- Inheritance can put you in a corner
+
+- need to ask the question what is the point of doing inheritance when implementing it
+
+a. The Object class
 
 	At the "top" of the inheritance chain is a class called object.
 
 	Example: We have many methods without creating them. like *.ToString() .GetType()*
 
-- Single vs. Mulitple Inheritance
+b. Single vs. Mulitple Inheritance
 
 	- Languages such as C# and Java support single inheritance
 
@@ -108,10 +118,11 @@ class Cat : Animal { }
 
 		A class can have *multiple* direct base classes
 
-- Inheritance and Constructors
 
 ### Abstraction
 ---
+
+**Concept** 
 
 The meaning of abstraction is, you don't need to explain everything. In our real life, we have vehicles such as cars, motorcycles and scooters. People only know how to drive these vehicles. It's not necessary to know how the vehicle runs or how petrol or diesel works in that vehicle.
  
@@ -238,6 +249,11 @@ foreach (Car car in cars)
 
 ### Interfaces
 ---
+
+**Concept**
+
+
+
 
 	"An interface is an API contract..."
 	
