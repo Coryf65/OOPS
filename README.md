@@ -18,7 +18,7 @@
 
 ## Concept quick links
 
-- [The C# Language](#the-c#-language)
+- [The C# Language](#the-c-language)
 - [Access Modifiers](#access-modifiers)
 - [Inheritance](#inheritance)
 - [Abstraction](#abstraction)
