@@ -21,6 +21,7 @@
 - [The C# Language](#the-c-language)
 - [Types](#types)
 - [Access Modifiers](#access-modifiers)
+- [Collections](#collections)
 - [Inheritance](#inheritance)
 - [Abstraction](#abstraction)
 - [Polymorphism](#polymorphism)
@@ -126,9 +127,86 @@ ___
 - **protected internal**: The type or member can be accessed by any code in the assembly in which it's declared, or from within a derived class in another assembly.
 - **private protected**: The type or member can be accessed by types derived from the class that are declared within its containing assembly.
 
+## Collections
 ___
 
+For many applications, you want to create and manage groups of related objects. There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.
+
+### Arrays
+
+Arrays are most useful for creating and working with a fixed number of strongly typed objects. For information about arrays, see [Arrays](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/).
+
+```C#
+// Declare a single-dimensional array of 5 integers.
+int[] array1 = new int[5];
+
+// Declare and set array element values.
+int[] array2 = new int[] { 1, 3, 5, 7, 9 };
+
+// Alternative syntax.
+int[] array3 = { 1, 2, 3, 4, 5, 6 };
+
+// Declare a two dimensional array.
+int[,] multiDimensionalArray1 = new int[2, 3];
+
+// Declare and set array element values.
+int[,] multiDimensionalArray2 = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+// Declare a jagged array.
+int[][] jaggedArray = new int[6][];
+
+// Set the values of the first array in the jagged array structure.
+jaggedArray[0] = new int[4] { 1, 2, 3, 4 };
+```
+
+
+
+### Collections
+
+Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
+A collection is a class, so you must declare an instance of the class before you can add elements to that collection.
+
+If your collection contains elements of only one data type, you can use one of the classes in the System.Collections.Generic namespace. A generic collection enforces type safety so that no other data type can be added to it. When you retrieve an element from a generic collection, you do not have to determine its data type or convert it.
+
+Common Collection Types
+
+
+- [System.Collections.Generic classes](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic?view=net-7.0)
+- [System.Collections.Concurrent classes](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent?view=net-7.0)
+- [System.Collections classes](https://learn.microsoft.com/en-us/dotnet/api/system.collections?view=net-7.0)
+
+
+The following example creates a list of strings and then iterates through the strings by using a foreach statement.
+
+```C#
+// Create a list of strings.
+var salmons = new List<string>();
+salmons.Add("chinook");
+salmons.Add("coho");
+salmons.Add("pink");
+salmons.Add("sockeye");
+
+// or setup in the initializer
+var salmons = new List<string> { "chinook", "coho", "pink", "sockeye" };
+
+// Remove an element from the list by specifying
+// the object.
+salmons.Remove("coho");
+
+// Iterate through the list.
+foreach (var salmon in salmons)
+{
+    Console.Write(salmon + " ");
+}
+// Output: chinook pink sockeye
+
+```
+
+
+
 ## What is Object Orientation ?
+___
 
 C# is an object-oriented programming language. The four basic principles of object-oriented programming are:
 
