@@ -26,7 +26,7 @@
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
 - [Static Classes](#static-classes)
-- [Lambdas](#lambda)
+- [Lambdas](#lambdas)
 - [Extension Methods](#extension-methods)
 - [Class Libraries](#class-libraries)
 - [Reference and Value Types](#reference-and-value-types)
