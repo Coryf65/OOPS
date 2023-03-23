@@ -26,6 +26,7 @@
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
 - [Static Classes](#static-classes)
+- [Extension Methods](#extension-methods)
 - [Class Libraries](#class-libraries)
 - [Reference and Value Types](#reference-and-value-types)
 
@@ -563,6 +564,26 @@ If the string was null we wanted to check we would get a runtime error, a Null r
 We don't call main the runtime calls this. It sets up an entry point for us. No point to have multiple entry points would be confusing.
 </p>
 </details>
+
+### Extension Methods
+
+Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. Extension methods are static methods, but they're called as if they were instance methods on the extended type. For client code written in C#, F# and Visual Basic, there's no apparent difference between calling an extension method and the methods defined in a type.
+
+example:
+
+```C#
+public static int WordCount(this string str)
+{
+    return str.Split(new char[] { ' ', '.', '?' }, StringSplitOptions.RemoveEmptyEntries).Length;
+}
+```
+
+calling it
+```C#
+string s = "Hello Extension Methods";
+int i = s.WordCount();
+```
+
 
 ### Class Libraries
 ---
