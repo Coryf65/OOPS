@@ -19,6 +19,7 @@
 ## Concept quick links
 
 - [The C# Language](#the-c-language)
+- [Types]()
 - [Access Modifiers](#access-modifiers)
 - [Inheritance](#inheritance)
 - [Abstraction](#abstraction)
@@ -49,9 +50,9 @@ What is C#?
 >		And much, much more!
 > definition from [W3 Schools](https://www.w3schools.com/cs/cs_intro.php)
 
-A. Types
+### Types
 
-- Simple Types 
+1. Simple Types 
 	___
 	- Singed integral: `sbyte`, `short`, `int`, `long`
 	- Unsigned integral: `byte`, `ushort`, `uint`, `ulong`
@@ -99,7 +100,7 @@ A. Types
 		//Output:
 		//Sum of 3 elements is 4.5.
 		```
-- Reference Types
+2. Reference Types
 	___
 	- Class types
 		- *Top Level class* `object`
