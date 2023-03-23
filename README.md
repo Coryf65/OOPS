@@ -26,6 +26,7 @@
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
 - [Static Classes](#static-classes)
+- [Lambdas](#lambda)
 - [Extension Methods](#extension-methods)
 - [Class Libraries](#class-libraries)
 - [Reference and Value Types](#reference-and-value-types)
@@ -565,7 +566,59 @@ We don't call main the runtime calls this. It sets up an entry point for us. No 
 </p>
 </details>
 
+### Lambdas
+---
+
+You use a lambda expression to create an anonymous function. Use the lambda declaration operator => to separate the lambda's parameter list from its body. A lambda expression can be of any of the following two forms...
+
+1. Expression Lambdas: `(input-parameters) => expression`
+
+2. Statement Lambdas: `(input-parameters) => { <sequence-of-statements> }`
+
+examples:
+
+Any lambda expression can be converted to a delegate type. The delegate type to which a lambda expression can be converted is defined by the types of its parameters and return value. If a lambda expression doesn't return a value, it can be converted to one of the Action delegate types; otherwise, it can be converted to one of the Func delegate types. For example, a lambda expression that has two parameters and returns no value can be converted to an Action<T1,T2> delegate. A lambda expression that has one parameter and returns a value can be converted to a Func<T,TResult> delegate. In the following example, the lambda expression x => x * x, which specifies a parameter that's named x and returns the value of x squared, is assigned to a variable of a delegate type:
+
+```C#
+Func<int, int> square = x => x * x;
+Console.WriteLine(square(5));
+// Output:
+// 25
+```
+
+Expression lambdas can also be converted to the expression tree types, as the following example shows:
+```C#
+System.Linq.Expressions.Expression<Func<int, int>> e = x => x * x;
+Console.WriteLine(e);
+// Output:
+// x => (x * x)
+```
+
+You can use lambda expressions in any code that requires instances of delegate types or expression trees, for example as an argument to the Task.Run(Action) method to pass the code that should be executed in the background. You can also use lambda expressions when you write LINQ in C#, as the following example shows:
+```C#
+int[] numbers = { 2, 3, 4, 5 };
+var squaredNumbers = numbers.Select(x => x * x);
+Console.WriteLine(string.Join(" ", squaredNumbers));
+// Output:
+// 4 9 16 25
+
+```
+
+The body of a statement lambda can consist of any number of statements; however, in practice there are typically no more than two or three.
+```C#
+Action<string> greet = name =>
+{
+    string greeting = $"Hello {name}!";
+    Console.WriteLine(greeting);
+};
+greet("World");
+// Output:
+// Hello World!
+```
+
+
 ### Extension Methods
+---
 
 Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. Extension methods are static methods, but they're called as if they were instance methods on the extended type. For client code written in C#, F# and Visual Basic, there's no apparent difference between calling an extension method and the methods defined in a type.
 
