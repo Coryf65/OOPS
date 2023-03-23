@@ -31,6 +31,7 @@
 - [Extension Methods](#extension-methods)
 - [Class Libraries](#class-libraries)
 - [Reference and Value Types](#reference-and-value-types)
+- [Reflection](#reflection)
 
 ## The C# Language
 
@@ -715,20 +716,17 @@ string s = "Hello Extension Methods";
 int i = s.WordCount();
 ```
 
-
 ### Class Libraries
 ---
 
 - Your project must add a reference to the Class Library. Just because they are in the same solution does not allow them to talk with one another.
 
 1. Namespaces
-	
 	- Used to group related classes together (system.io, for reading and writing files)
 	- Minimizes the risk of name collisions
 	- Typically matches the physical folder structure on disk (kinda of like directories for files, used to organize!)
 
 2. Referencing Types in Namespaces
-
 	- Qualify the full path or use a *using* statement
 
 ```C#
@@ -742,21 +740,17 @@ Person p = new();
 ```
 
 3. When to Create Class Libraries
-
 	- Whenever you need to use the same classes in multiple projects. (like a Logger for logging to files or the console)
 
 4. Using Types in Class Libraries
 
 5. Namespaces and Class Libraries
-
 	- No specific rules apply to namespaces and class libraries
 	- Typically the namespace matches the name of the class library
 
 6. Internal vs Public
-
-- Internal types and members - Can be reached from within the same project
-
-- Public types and members - Can also be reached from any project that references the project
+	- Internal types and members - Can be reached from within the same project
+	- Public types and members - Can also be reached from any project that references the project
 
 ### Reference and Value Types
 ---
@@ -770,18 +764,15 @@ Person p = new();
 | Default value: null | "Actual" default values (int = 0, bool = false) |
 
 - Structs and Inheritance
-
 	- **Structs** implicitly inherit System.ValueType
 	- **Structs** can implement interfaces
 	- **Structs** cannot be made abstract
 	- **Structs** are implicitly sealed
 
 - When to use which? (classes vs structs)
-
 	- "Since pretty much all simple types have a;ready been defined in the base class library, we can create a class"
 
 - Boxing
-
 	- Done (implicitly) when a value type is treated as a reference type:
 
 ```C#
@@ -797,7 +788,6 @@ static void Foo(object value)
 ```
 
 - UnBoxing
-
 	- Done (explicitly) when a reference type is cast into a value type:
 
 ```C#
@@ -821,21 +811,34 @@ object o = i;    // Boxing
 int j = (int)o;  // Unboxing
 ```
 
-> Ususally useful if we are using some code out of our control where we can work around the limitations
+> Usually useful if we are using some code out of our control where we can work around the limitations
 
 - Nullable Value Types
-
 	- A generic type that allows for nullable value types.. 
 	( Nullable<int>, int?)
 
 - Nullable Reference Types
-
 	- an opt-in feature starting in *C# 8*
-
 	- Per file using **#nullable enable**
-
 	- Per project using **<Nullable>enable</Nullable>**
 
+## Reflection
 
----
+Attributes provide a powerful method of associating metadata, or declarative information, with code (assemblies, types, methods, properties, and so forth). After an attribute is associated with a program entity, the attribute can be queried at run time by using a technique called reflection.
+
+example: getting the type of a variable
+
+```C#
+// Using GetType to obtain type information:
+int i = 42;
+Type type = i.GetType();
+Console.WriteLine(type);
+```
+	
+```C#
+// Using Reflection to get information of an Assembly:
+Assembly info = typeof(int).Assembly;
+Console.WriteLine(info);
+```
+
 - [back to top](#oops)
