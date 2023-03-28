@@ -20,6 +20,7 @@
 
 - [The C# Language](#the-c-language)
 - [.NET, .NET Core, .NET Framework, .NET Standard](#net)
+- [Different Application Types / Models]()
 - [Types](#types)
 - [Access Modifiers](#access-modifiers)
 - [Collections](#collections)
@@ -125,19 +126,35 @@ What is C#?
 
 - NET is a free, cross-platform, open source developer platform for building many different types of applications.
 
-With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, IoT, and more.
+![image](https://user-images.githubusercontent.com/20805058/228349772-6d96c2fd-349c-4d0b-8a2f-513014a4146e.png)
+
+- With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, IoT, and more.
 
 ### What is .NET Framework?
 
 - .NET Framework is the original .NET implementation. It supports running websites, services, desktop apps, and more on Windows. Microsoft released .NET Framework in the early 1990s.
 
+- The .NET Framework was the initial flavor of .NET. It provides the developer with a set of APIs for the most common programming needs and interacts with the underlying operating system. It runs only on Windows, and its lifecycle is coming to an the end right now, after the release of .NET 5.
+
+### Mono
+
+- The Mono project brings .NET to Linux machines. It is the best known porting project based on the .NET standard specifications. Even if Mono's aim is to run on Linux applications built for the .NET Framework and vice versa, the compatibility is not always guaranteed. There are a couple of reasons for this: some .NET Framework features are too tied to the Windows operating system, and often the Mono implementation lags behind the newest .NET Framework features.
+
 ### What is .NET Core
 
 - Microsoft launched .NET Core in late 2014 to enable cross-platform support for .NET developers. The company released the newest version of the .NET Core, .NET 5.0, in November 2020 and renamed it .NET. The term .NET in this article refers to .NET 5.0. .NET Core is open-source on GitHub.
 
+- .NET Core is a complete rewriting of the .NET Framework with the cross-platform goal in mind. Its redesigned architecture defines a minimal feature set as the common core across Windows, Linux, and Mac platforms. The rest of the features can be downloaded as library packages.
+
 ### What is .NET Standard
 
 - .NET Standard is a formal specification of different functions (called APIs). Different .NET implementations can reuse the same code and libraries. Each implementation uses both .NET standard APIs and unique APIs specific to the operating systems it runs on.
+
+- The .NET Standard is not another .NET implementation. It is a formal specification of .NET APIs that helps to create cross-platform libraries. If a platform supports a given .NET Standard version, then a library supporting the same version will run on it, regardless of the device type and the framework implementation (.NET Framework, Mono, .NET Core).
+
+### .NET
+
+- Since the beginning, the .NET term has been used to indicate the universal development platform. However, many implementations arose since then, so the .NET name created ambiguities. .NET 5 aims to make concrete the initial vision of a universal development platform. It replaces the current existing implementations: .NET Framework, .NET Core, and even Mono. So, from .NET 5 on, only .NET will exist as a name and as a platform.
 
 ### What is the .NET runtime
 
@@ -171,6 +188,19 @@ You can use Xamarin for desktop application development. Additionally, Universal
 
 With ML.NET, you can develop and integrate custom machine learning models into your .NET applications. You can use .NET IoT Libraries to develop applications on sensors and other smart devices. For any solutions not available in the frameworks, you can find many specific function libraries on the public NuGet repository. You can use Nuget to create, share, and use many .NET libraries for almost any purpose.
 
+## .NET Application Models 
+
+Above the core components, you have the different application model frameworks, that is, the libraries that offer support for developing different types of applications. So, for example, you have
+
+- ASP.NET: The framework that allows you to build web applications and web APIs.
+
+- Windows Presentation Foundation (WPF): A graphical user interface for Windows desktop applications.
+
+- Xamarin: The framework for building cross-platform mobile, TV, and desktop applications.
+
+- Blazor: The framework to build client web applications by using C#. It also allows you to generate client web apps in WebAssembly code.
+
+- ML.NET: The machine learning framework that simplifies the integration of machine learning models in your .NET application.
 
 ## Access Modifiers
 
