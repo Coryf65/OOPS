@@ -22,7 +22,7 @@
 
 - [The C# Language](#the-c-language)
 - [.NET, .NET Core, .NET Framework, .NET Standard](#net)
-- [Different Application Types / Models]()
+- [Different Application Types / Models](#net-application-models)
 - [Types](#types)
 - [Access Modifiers](#access-modifiers)
 - [Collections](#collections)
