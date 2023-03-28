@@ -19,7 +19,7 @@
 ## Concept quick links
 
 - [The C# Language](#the-c-language)
-- [.NET, .NET Core, .NET Framework, .NET Standard](#.net)
+- [.NET, .NET Core, .NET Framework, .NET Standard](#net)
 - [Types](#types)
 - [Access Modifiers](#access-modifiers)
 - [Collections](#collections)
