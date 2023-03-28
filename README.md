@@ -1,6 +1,8 @@
-# OOPS
+# C#, .NET and OOP
 
-> using C# and .Net to learn more about OOP while taking notes to help myself out
+> using C# and .Net to learn more about OOP while taking notes to help myself out. This also contains any notes that help me clarify C# .NET and OOP.
+
+### Code examples:
 
 1. DungeonsOfDoom, a C# Console App Game
 2. Excercises, some demos and tests, a C# Console App
