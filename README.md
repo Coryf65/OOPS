@@ -532,9 +532,6 @@ foreach (Car car in cars)
 
 **Concept**
 
-
-
-
 	"An interface is an API contract..."
 	
 	"Classes can implement as many contracts as they see fit..."
@@ -780,7 +777,6 @@ greet("World");
 // Hello World!
 ```
 
-
 ### Extension Methods
 ---
 
@@ -799,6 +795,29 @@ calling it
 ```C#
 string s = "Hello Extension Methods";
 int i = s.WordCount();
+```
+
+another example of creating a greater than extension method:
+
+```C#
+public static class IntExtensions
+{
+	public static bool IsGreaterThan(this int i, int value)
+	{
+	    return i > value;
+	}
+}
+```
+
+```C#
+static void Main(string[] args)
+{
+	int i = 10;
+
+	bool result = i.IsGreaterThan(100); 
+
+	Console.WriteLine(result);
+}
 ```
 
 ### Class Libraries
