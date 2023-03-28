@@ -19,6 +19,7 @@
 ## Concept quick links
 
 - [The C# Language](#the-c-language)
+- [.NET, .NET Core, .NET Framework, .NET Standard](#.net)
 - [Types](#types)
 - [Access Modifiers](#access-modifiers)
 - [Collections](#collections)
@@ -118,6 +119,52 @@ What is C#?
 		- user defined `delegate int Name(...)`
 
 ___
+
+## .NET
+
+What is .NET?
+
+- NET is a free, cross-platform, open source developer platform for building many different types of applications.
+
+With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, IoT, and more.
+
+What is .NET Framework?
+
+- .NET Framework is the original .NET implementation. It supports running websites, services, desktop apps, and more on Windows. Microsoft released .NET Framework in the early 1990s.
+
+What is .NET Core
+
+- Microsoft launched .NET Core in late 2014 to enable cross-platform support for .NET developers. The company released the newest version of the .NET Core, .NET 5.0, in November 2020 and renamed it .NET. The term .NET in this article refers to .NET 5.0. .NET Core is open-source on GitHub.
+
+What is .NET Standard
+
+- .NET Standard is a formal specification of different functions (called APIs). Different .NET implementations can reuse the same code and libraries. Each implementation uses both .NET standard APIs and unique APIs specific to the operating systems it runs on.
+
+What is the .NET runtime
+
+The .NET runtime, also called Common Language Runtime (CLR), compiles and executes .NET programs on different operating systems.
+Just-in-time compilation
+
+The CLR compiles code as the developer writes it. During compilation, CLR translates the code into Common Intermediate Language (CIL). For example, code written in C# has English-like syntax and words. .NET compiles or translates this code into CIL. CIL code looks different because it is a lower-level machine code language.
+Execution
+
+.NET runtime manages the execution of CIL code. CIL is cross-platform compatible, and any operating system can process it. Cross-platform compatibility refers to an application’s ability to run on multiple different operating systems with minimal modifications. For example, an application in C# can run on Windows, Linux, or macOS without any code modifications. Such an application is called a cross-platform application.
+What are .NET application model frameworks?
+
+The application model frameworks are a collection of developer tools and libraries that support fast and efficient .NET project development. Different frameworks exist for different types of applications, such as those listed below.
+Web applications
+
+The ASP.NET framework extends the .NET developer platform specifically for building web-based applications. It supports web technologies such as REST APIS, HTML, CSS, and JavaScript. It provides a built-in user database with multi-factor and external authentication. ASP.NET supports industry-standard authentication protocols with a built-in security mechanism to protect your .NET apps from cyberattacks.
+Mobile applications
+
+You can use Xamarin/Mono to run .NET apps on all the major mobile operating systems, including iOS and Android. Xamarin includes Xamarin.Forms, an open-source mobile user interface framework. .NET developers use Xamarin.forms to create a consistent user experience across mobile platforms. All .NET apps can look the same, even on different mobile devices.
+Desktop applications
+
+You can use Xamarin for desktop application development. Additionally, Universal Windows Platform extends .NET Windows 10 application development. Windows Presentation Foundation and Windows Forms are other frameworks for user interface design on Windows.
+Other applications
+
+With ML.NET, you can develop and integrate custom machine learning models into your .NET applications. You can use .NET IoT Libraries to develop applications on sensors and other smart devices. For any solutions not available in the frameworks, you can find many specific function libraries on the public NuGet repository. You can use Nuget to create, share, and use many .NET libraries for almost any purpose.
+
 
 ## Access Modifiers
 
