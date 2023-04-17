@@ -312,7 +312,6 @@ while (i < 5)
   i++;
 }
 ```
-	
 
 2. Do While
 
