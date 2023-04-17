@@ -30,6 +30,7 @@
 - [Abstraction](#abstraction)
 - [Polymorphism](#polymorphism)
 - [Interfaces](#interfaces)
+- [SOLID](#solid)
 - [Static Classes](#static-classes)
 - [Lambdas](#lambdas)
 - [Extension Methods](#extension-methods)
@@ -626,6 +627,39 @@ some examples in the Zoo project
 
 	- Have a method in the interface have a default implementation
 
+### SOLID
+---
+
+**Concept**
+
+SOLID principles are the design principles that enable us to manage several software design problems. Robert C. Martin compiled these principles in the 1990s. These principles provide us with ways to move from tightly coupled code and little encapsulation to the desired results of loosely coupled and encapsulated real business needs properly.
+
+1. Single Responsibility
+
+![singleresponsibilityprinciple](https://user-images.githubusercontent.com/20805058/232551811-d084daf2-2e9c-4013-a319-76cbf1b80d55.jpg)
+	- Each class should have a single purpose and fufill only that purpose.
+
+2. Open Closed
+
+![openclosedprinciple](https://user-images.githubusercontent.com/20805058/232552033-815f80d0-c516-41f8-bf4b-93ae86bebbe3.jpg)
+	- Classes should be closed to modification and open for extension.
+
+3. Liskov Substitution
+
+![liskovsubtitutionprinciple](https://user-images.githubusercontent.com/20805058/232552124-9e8bac4c-ac2c-4edf-9620-a80b934e2e01.jpg)
+	- Each sub class / derived class should be substituable for the base / parent class. 
+
+4. Interface Segregation
+
+![interfacesegregationprinciple](https://user-images.githubusercontent.com/20805058/232552189-4cd6f9e7-f5ef-480c-aec9-cf5d8583eef1.jpg)
+	- Interfaces should not force classes to implement what they cannot do.
+	  Large interfaces should be broken up into smaller ones.
+
+5. Dependency Inversion
+
+![dependencyinversionprinciple](https://user-images.githubusercontent.com/20805058/232552309-b362bd9d-0ea5-4e40-8d84-e7eeba0d1a77.jpg)
+	- Components should depend on abstractions, not concrete classes.
+
 ### Static Classes
 ___
 
@@ -869,7 +903,8 @@ Person p = new();
 
 - Structs and Inheritance
 	- **Structs** implicitly inherit System.ValueType
-	- **Structs** can implement interfaces
+	- **Structs** can implement 
+	s
 	- **Structs** cannot be made abstract
 	- **Structs** are implicitly sealed
 
